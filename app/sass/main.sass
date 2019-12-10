@@ -1,0 +1,47 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+*
+	margin: 0
+	padding: 0
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+// Пользовательский Sass:
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Roboto', sans-serif
+	overflow-x: hidden
+	color: $text
+	&.ishome
+		.site-header
+			background-repeat: no-repeat
+			min-height: 700px
+			height: 100vh
+			background-color: $dark
+			.top-line
+				padding-top: 40px
+				position: absolute
+				width: 100%
+				z-index: 1
+
+section, header
+	position: relative
+	background-size: cover
+	background-position: center
