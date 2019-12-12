@@ -44,7 +44,7 @@ gulp.task('styles', function() {
 // Scripts & JS Libraries
 gulp.task('scripts', function() {
 	return gulp.src([
-		// 'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
+		'app/lib/mmenu-js/mmenu.js',
 		'app/js/_libs.js', // JS libraries (all in one)
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
@@ -113,4 +113,36 @@ gulp.task('watch', function() {
 	gulp.watch('app/img/_src/**/*', gulp.parallel('img'));
 });
 
+gulp.task('removedist', function() { 
+	return del(['dist']);
+});
+
+gulp.task('dist', function () {
+
+	var buildFiles = gulp.src([
+		'app/*.html',
+		]).pipe(gulp.dest('dist'));
+
+	var buildCss = gulp.src([
+		'app/css/styles.min.css',
+		]).pipe(gulp.dest('dist/css'));
+
+	var buildJs = gulp.src([
+		'app/js/scripts.min.js',
+		]).pipe(gulp.dest('dist/js'));
+
+	var buildFonts = gulp.src([
+		'app/fonts/**/*',
+		]).pipe(gulp.dest('dist/fonts'));
+
+	var buildImage = gulp.src([
+		'app/img/**/*',
+		]).pipe(gulp.dest('dist/img'));
+
+
+    return buildFiles, buildCss, buildJs, buildFonts, buildImage;
+
+});
+
 gulp.task('default', gulp.parallel('img', 'styles', 'scripts', 'browser-sync', 'watch'));
+gulp.task('build', gulp.series('removedist','styles', 'scripts', 'img', 'dist'));

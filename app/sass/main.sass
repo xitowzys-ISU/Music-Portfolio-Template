@@ -45,3 +45,62 @@ section, header
 	position: relative
 	background-size: cover
 	background-position: center
+
+// Меню
+.hamburger
+	right: 0
+	position: absolute
+	top: 34px
+	.hamburger-box
+		width: 34px
+		.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+			border-radius: 0
+			color: #FFFFFF
+			background-color: #FFFFFF
+			width: 34px
+			height: 2px
+
+.mm-navbar
+	height: 120px
+	position: relative
+	border-bottom: 0
+	.mm-navbar__title img
+		width: 380px
+		height: auto
+
+.mm-listitem	
+	&:after
+		display: none
+
+.mm-listitem 
+	> a
+		text-align: center
+		transition: color .25s ease
+		font-size: 16pt
+		font-family: Bradobrei
+		padding: 
+			top: 5px
+		&:hover
+			color: #FFFFFF
+		&::before
+			content: "\f3b5"
+			font-family: 'Line Awesome Brands'
+			margin-right: 8px
+			font-size: 20pt
+			color: #FFFFFF
+		&::after
+			content: "\f3b5"
+			font-family: 'Line Awesome Brands'
+			margin-left: 8px
+			font-size: 20pt	
+			color: #FFFFFF
+	&.active
+		&>a
+			color: #FFFFFF
+
+.mm-listitem_selected
+	color: #FFFFFF
+	.mm-listitem__text
+		background-color: transparent
+
+
