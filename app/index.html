@@ -6,21 +6,25 @@
 	<meta charset="utf-8">
 
 	<title>RAIDEMOT</title>
-	<meta name="description" content="">
 
+	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
+	<meta name="theme-color" content="#0a0a0a">
+	<meta name="msapplication-navbutton-color" content="#0a0a0a">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#0a0a0a">
 
 	<link rel="icon" href="img/favicon.png">
-
 	<link rel="stylesheet" href="css/styles.min.css">
+
+
 
 </head>
 
 <body class="ishome">
 
-	<div id="my-page">
+	<div id="my-page" class="main-page" style="background-image: url('img/_src/background.svg');">
 		<div id="my-header">
-			<header class="site-header" style="background-image: url('img/_src/background.svg');">
+			<header>
 				<div class="top-line">
 					<a href="#my-menu" class="hamburger hamburger--elastic">
 						<span class="hamburger-box">
@@ -29,17 +33,62 @@
 					</a>
 					<nav id="my-menu">
 						<ul>
-							<li class="active"><a href="#">Главная</a></li>
-							<li><a href="#">Блог</a></li>
-							<li><a href="#">Видео</a></li>
-							<li><a href="#">Ноты (Musescore)</a></li>
-							<li><a href="#">Обо мне</a></li>
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">Sheets</a></li>
+							<li><a href="#">Video</a></li>
+							<li><a href="#">Contacts</a></li>
+							<li><a href="#">About me</a></li>
 						</ul>
 					</nav>
 				</div>
 			</header>
 		</div>
-		<div id="my-content"></div>
+
+		<div id="my-content">
+			<div class="main-content-flex">
+				<div class="flex-center">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-7 col-xs-7">
+								<div class="content-composition">
+									<div class="welcome">
+										<h1 class="h1">RAIDEMOT</h1>
+									</div>
+									<span class='inline-b'></span>
+									<p class="quotes">„Neither a lofty degree of intelligence nor imagination nor
+										both together go to the
+										making of genius. Love, love, love, that is the soul of genius.“</p>
+
+									<p class="author-quotes">Wolfgang Amadeus Mozart</p>
+
+									<a href="/video.html" class="button">Watch the video</a>
+								</div>
+							</div>
+							<div class="col-sm-5 col-xs-5">
+								<div class="content-composition">
+									<div class="logo-div">
+										<div class="logo" style="background-image: url('img/_src/Logo.svg');"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="header-socials">
+				<nav class="soc">
+					<ul>
+						<li><a href="#"><i class="la la-vk"></i></a></li>
+						<li><a href="#"><i class="la la-instagram"></i></a></li>
+						<li><a href="#"><i class="la la-twitter"></i></a></li>
+						<li><a href="#"><i class="la la-soundcloud"></i></a></li>
+						<li><a href="#"><i class="la la-youtube"></i></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
 		<div id="my-footer"></div>
 	</div>
 

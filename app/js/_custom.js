@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	var apiMmenu = menu.API;
 	var hamburger = document.getElementsByClassName('hamburger')[0];
 
-	apiMmenu.bind("open:start",
+	apiMmenu.bind("open:finish",
 		() => {
 			hamburger.classList.add("is-active");
 		}
 	);
 
-	apiMmenu.bind("close:before",
+	apiMmenu.bind("close:finish",
 		() => {
 			hamburger.classList.remove("is-active");
 		}

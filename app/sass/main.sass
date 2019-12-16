@@ -2,6 +2,7 @@
 @import fonts
 @import libs
 
+// Основные настройки страницы
 ::placeholder
 	color: #666
 
@@ -20,7 +21,7 @@ input, textarea
 	&:required:valid
 		border-color: green
 
-// Пользовательский Sass:
+// Пользовательский CSS
 body
 	font-size: 16px
 	min-width: 320px
@@ -30,11 +31,14 @@ body
 	overflow-x: hidden
 	color: $text
 	&.ishome
-		.site-header
+		.main-page
 			background-repeat: no-repeat
 			min-height: 700px
 			height: 100vh
 			background-color: $dark
+			position: relative
+			background-size: cover
+			background-position: center
 			.top-line
 				padding-top: 40px
 				position: absolute
@@ -103,4 +107,135 @@ section, header
 	.mm-listitem__text
 		background-color: transparent
 
+// Контент на главной странице
+.h1, .h2, .h3, .h4, .h5, .h6
+	line-height: 1.4
+	text-transform: uppercase
 
+.button
+	display: inline-block
+	border: none
+	color: $blackColor
+	text-decoration: none
+	background-color: #d5d5d5
+	margin: auto
+	padding: 15px 45px
+	font-size: 13px
+	font-family: Roboto
+	font-weight: 800
+	text-transform: uppercase
+	letter-spacing: 3px
+	border-radius: 10px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .25s ease
+	cursor: pointer
+	&::after
+		transition: background-color .25s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($accent, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		text-decoration: none
+		color: $blackColor
+	&:hover
+		background-color: lighten(#e9e9e9, 5%)
+		&::after
+			opacity: .22
+	// &:active
+	// 	background-color: darken($accent, 5%)
+	// 	&::after
+	// 		opacity: .32
+
+.main-content-flex
+	display: flex
+	position: relative
+	height: 100vh
+	top: 0
+
+.flex-center
+	margin: auto
+
+.content-composition
+	color: #fff
+	font-size: 20px
+	font-family: AmadeusAP
+	text-align: center
+	position: relative
+	p
+		font-size: 24px
+
+.welcome
+	height: 1px
+	width: 100%
+	position: relative
+	background-color: #fff
+	display: inline-block
+	h1
+		font-family: Shablon
+		font-size: 36px
+		line-height: 3
+		margin-top: 0
+		border-bottom: 1px solid #fff
+		white-space: nowrap
+
+.quotes
+	text-align: left
+	margin-top: 60px
+	margin-bottom: 0
+
+.author-quotes
+	text-align: right
+	margin-top: 0
+	margin-bottom: 40px
+
+//Социальные ссылки справа
+.header-socials
+	position: absolute
+	display: flex
+	right: 0
+	height: 100%
+	background-color: rgba(#000, .65)
+	border-left: rgba(#fff, .1) 1px solid
+	top: 0
+	padding: 0 7px
+
+.soc
+	margin: auto
+
+	ul, li
+		margin: 0
+		padding: 0
+		list-style-type: none		
+	a
+		color: #fff
+		font-size: 32px
+		display: block
+		height: 50px
+		width: 50px
+		text-align: center
+		margin: 18px 0
+		line-height: 52px
+		border-radius: 20px
+		text-decoration: none
+		transition: background-color .25s ease
+		&:hover
+			background-color: rgba(#fff, .4)
+
+.logo-div
+	position: relative
+	bottom: 45px
+
+.logo
+	background-repeat: no-repeat
+	background-size: 450px
+	background-position: center
+	height: 350px
