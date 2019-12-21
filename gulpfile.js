@@ -44,6 +44,8 @@ gulp.task('styles', function() {
 // Scripts & JS Libraries
 gulp.task('scripts', function() {
 	return gulp.src([
+		'app/lib/jquery/jquery-3.4.1.min.js',
+		'app/lib/lightgallery/js/lightgallery-all.js',
 		'app/lib/mmenu-js/mmenu.js',
 		'app/js/_libs.js', // JS libraries (all in one)
 		'app/js/_custom.js', // Custom scripts. Always at the end

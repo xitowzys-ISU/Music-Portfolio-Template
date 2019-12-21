@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+	$('#video-gallery').lightGallery(); 
+
 	var window_size = window.matchMedia("(max-width: 768px)");
 
 	if (window_size.matches) {
