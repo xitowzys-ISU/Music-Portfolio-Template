@@ -12,15 +12,24 @@
         background-size: 350px
         background-position: center
         height: 350px
+    .blog-header-logo 
+        width: 300px
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+    body
+        &.ishome
+            .main-page
+                background-image: none !important
+    .hamburger
+        position: absolute
     .logo
+        margin-top: 50px
         background-repeat: no-repeat
-        background-size: 350px
+        background-size: 250px
         background-position: center
-        height: 350px
+        height: 250px
     .mm-navbar
         height: 120px
         position: relative
@@ -28,7 +37,15 @@
         .mm-navbar__title img
             width: 310px
             height: auto
-
+    .header-socials
+        display: none
+    .page_previous, .page_next
+        display: none
+    .blog-header-logo img 
+        margin-top: 30px
+        width: 250px
+    .button
+        margin-bottom: 20px
 @media only screen and (max-width : 576px)
 	/**/
 

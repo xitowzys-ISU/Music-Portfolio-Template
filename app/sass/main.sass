@@ -278,12 +278,21 @@ body
 				z-index: 3
 
 .blog-header
-    line-height: 1
+	display: flex
+	line-height: 1
+	justify-content: center
+	align-items: center
+	margin-bottom: 10px
 
 .blog-header-logo
+	display: flex
+	align-items: center
+	justify-content: center
 	font-family: "Playfair Display", Georgia, "Times New Roman", serif
 	font-size: 2.25rem
-	margin-top: 20px
+	img
+		margin-top: 20px
+		width: 300px
 
 .blog-post
 	border: 1px solid #dee2e6
@@ -383,6 +392,8 @@ body
 //video.html
 
 #video-gallery
+	justify-content: center
+	align-items: center
 	img
 		border: 3px solid #dee2e6
 		border-radius: .25rem
