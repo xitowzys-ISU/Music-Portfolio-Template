@@ -161,16 +161,11 @@ body
 		background-color: lighten(#e9e9e9, 5%)
 		&::after
 			opacity: .22
-	// &:active
-	// 	background-color: darken($accent, 5%)
-	// 	&::after
-	// 		opacity: .32
 
 .main-content-flex
 	display: flex
 	position: relative
 	min-height: 100vh
-	//height: 100vh
 	top: 0
 
 .flex-center
@@ -302,13 +297,18 @@ body
 	background-color: #181515
 	margin-bottom: 25px
 	>h2
-		color: #FFFFFF //d6d6d6
-	>h2, p
-		margin: 10px
+		color: #FFFFFF
+		margin: 10px 10px 10px 10px
+	>p
+		margin: 0 10px 10px 10px
+	>img
+		width: 100%
+		padding: 20px
+		border-radius: .25rem
 
 .blog-post-title
-	margin-bottom: .25rem
-	font-size: 2.5rem
+	font-size: 2.2rem
+	line-height: 1.2
 
 .blog-post-meta
     margin-bottom: 1.25rem
@@ -337,6 +337,39 @@ body
 		text-align: center
 	hr
 		margin-bottom: 10px
+
+.form-search
+	display: flex
+	justify-content: center
+	align-content: center
+	flex-wrap: wrap
+
+.text-search
+	display: block
+	width: 100%
+	height: calc(1.5em + .75rem + 2px)
+	padding: .375rem .75rem
+	font-size: 1rem
+	font-weight: 400
+	line-height: 1.5
+	color:#495057
+	background-color:#fff
+	background-clip: padding-box
+	border: 1px solid#ced4da
+	border-radius: .25rem
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
+
+.submit-search
+	text-align: center
+	margin: 10px 2px 2px 2px
+	color: white
+	height: 2.5em
+	font-weight: 600
+	background-color: #f53900
+	border-radius: 0.4em
+	width: 80%
+	font-size: 16px
+	
 //Перенаправление на другую страницу
 .page-link
 	position: relative
@@ -390,17 +423,24 @@ body
 
 
 //video.html
-
 #video-gallery
-	justify-content: center
-	align-items: center
+	display: flex
+	flex-wrap: wrap
+
+.card-video
+	margin-bottom: 20px
+	position: relative
+	display: flex
+	flex-direction: column
+	border-radius: .25rem
 	img
+		width: 100%
+		height: 100%
 		border: 3px solid #dee2e6
 		border-radius: .25rem
-		width: 350px
-		height: 200px
-		margin: 0 0 10px 10px
+		transition: 0.5s
 		&:hover
-			background-color: #FFFFFF
+			transition: 0.5s
+			filter: opacity(.5) drop-shadow(0 0 0 white)
 
 @import "media"

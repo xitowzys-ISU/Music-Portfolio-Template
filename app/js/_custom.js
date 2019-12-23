@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-	$('#video-gallery').lightGallery(); 
+	//$('#video-gallery').lightGallery(); 
+
+	
+
+    $('#video-gallery').lightGallery({
+        selector: '.vv'
+    });
+
+
 
 	var window_size = window.matchMedia("(max-width: 768px)");
 
